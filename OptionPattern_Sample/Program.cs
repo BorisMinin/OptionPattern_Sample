@@ -1,4 +1,3 @@
-
 namespace OptionPattern_Sample
 {
     public class Program
@@ -10,6 +9,10 @@ namespace OptionPattern_Sample
             // Add services to the container.
 
             builder.Services.AddControllers();
+
+            // Options pattern
+            builder.Services.Configure<MailingSettings>(builder.Configuration.GetSection("MailingSettings"));
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
