@@ -1,0 +1,6 @@
+@OptionPattern_Sample_HostAddress = http://localhost:5033
+
+GET {{OptionPattern_Sample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
