@@ -1,4 +1,5 @@
-namespace OptionPattern_Sample
+
+namespace OptionPatternWithIConfigureOptions_Sample
 {
     public class Program
     {
@@ -7,10 +8,10 @@ namespace OptionPattern_Sample
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
             builder.Services.AddControllers();
 
-            // Options pattern
-            builder.Services.Configure<MailingSettings>(builder.Configuration.GetSection("MailingSettings"));
+            builder.Services.ConfigureOptions<ApplicationOptionsSetup>();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -25,7 +26,10 @@ namespace OptionPattern_Sample
                 app.UseSwaggerUI();
             }
 
+            app.UseHttpsRedirection();
+
             app.UseAuthorization();
+
 
             app.MapControllers();
 
