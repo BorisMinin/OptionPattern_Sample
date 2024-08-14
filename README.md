@@ -2,11 +2,11 @@
 
 ## OptionPattern_Sample
 ### Description:
-Comming soon Todo: complite description
+Implementation of OptionsPattern
 
 ## OptionPatternWithIConfigureOptions_Sample
 ### Description:
-Comming soon Todo: complite description
+Implementation of OptionsPattern with IConfigurationOptions
 
 ## Used links
 **IOptions pattern**
